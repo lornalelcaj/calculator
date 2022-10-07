@@ -1,0 +1,94 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width: auto;
+}
+.d-flex{
+    display: flex;
+}
+.text{
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    
+}
+.first_div{
+    width: 70%;
+    height: 70px;
+    background-color: black;
+}
+h1{
+    color: aliceblue;
+}
+p{
+    color: slategray;
+}
+.second_div{
+    background-color: black;
+    justify-content: space-between;
+    width: 30%;
+    align-items: center;
+    padding-right: 5px;
+}
+.btn{
+    background-color: slategray;
+    padding: 3px;
+    color: aliceblue;
+    border-radius: 5px 5px 5px 5px;
+}
+.green{
+    color: black;
+    background-color: greenyellow;
+}
+.container{
+    
+    justify-content: center;
+    padding-top: 10px;
+  
+}
+#calculator{
+    background-color:rgb(20, 19, 23);
+    height: 350px;
+    width: 250px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#display{
+    justify-content: end;
+    height: 30px;
+    color: aliceblue;
+    font-size: 40px;
+    padding-left: 170px;
+}
+.btn1, .btn2{
+    height: 45px;
+    width: 45px;
+    font-size: 20px;
+    border-radius: 100%;
+    color: aliceblue;
+}
+.btn1{
+    background-color: gray;
+}
+.btn2{
+    background-color: orange;
+}
+.btn3{
+    width: 200px;
+    height: 30px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: silver;
+    margin-bottom: 10px;
+}
+.photo{
+    height: 100px;
+    width: 150px;
+    margin: 100px 100px 400px 400px;
+    background-color: darkgray;
+    
+}

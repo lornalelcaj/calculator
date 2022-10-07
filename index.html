@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="d-flex">
+        <div class="d-flex first_div">
+        <img src="1.png" height="60px" alt="" onclick="newpage('body')">
+        <div class="text d-flex">
+            <h1 onclick="newpage()">Basic-Calculator</h1>
+            <p onclick="newpage()">Marisa</p>
+        </div>
+        </div>
+        <div class="d-flex second_div">
+           <button class="btn" onclick="newpage()"> <i class="fa fa-heart" style="font-size:40px;color:white"></i></button>
+            <button class="btn" onclick="newpage()" >View in Editor</button>
+            <button class="green btn" onclick="newpage()" >Sign Up</button>
+            <button class="btn" onclick="newpage()" >Log In</button>
+        </div>
+    </nav>
+    <div class="container d-flex">
+        <div id="calculator" class="d-flex">
+            <div id="display">0</div>
+            <div class="row">
+            <button  class="btn1" onclick="press(7);" value="7">7</button>
+            <button class="btn1" onclick="press(8);" value="8">8</button>
+            <button class="btn1" onclick="press(9);" value="9">9</button>
+            <button class="btn2" class="operator" onclick="setOP('/');">÷</button>
+            </div>
+            <div class="row">
+            <button  class="btn1" onclick="press(4);" value="4">4</button>
+            <button  class="btn1" onclick="press(5);" value="5">5</button>
+            <button class="btn1" onclick="press(6);" value="6">6</button>
+            <button class="btn2" class="operator" onclick="setOP('*');">×</button>
+            </div>
+            <div class="row">
+            <button class="btn1" onclick="press(1);" value="1">1</button>
+            <button class="btn1" onclick="press(2);" value="2">2</button>
+            <button class="btn1" onclick="press(3);" value="3">3</button>
+            <button class="btn2" class="operator" onclick="setOP('-');">−</button>
+            </div>
+            <div class="row">
+            <button class="btn1" onclick="clr();">C</button>
+            <button class="btn1" onclick="press(0);">0</button>
+            <button class="btn1" onclick="press('.');">.</button>
+            <button class="btn2" class="operator" onclick="setOP('+');">+</button>
+            </div>
+            <div class="row">
+            <button class="btn3" id="equals" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
