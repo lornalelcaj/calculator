@@ -10,7 +10,6 @@ var i=0;
 var op=" ";
 var k;
 function press(value1){
-    // console.log("op is: ", op)
     if( k==1) {
         document.getElementById("display").innerHTML = "  ";  
         
