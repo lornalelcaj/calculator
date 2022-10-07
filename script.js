@@ -7,31 +7,45 @@ function newpage(){
 }
 var arr=[];
 var i=0;
-var displayDiv = document.getElementById("display");
-var x;
-var op;
-var temp;
+var op=" ";
+
+
+
 function press(value1){
-   // if(displayDiv.value ==="0"){ 
-    displayDiv.innerHTML =value1;
-    arr[i]=value1;
-    i++;
-    x=document.getElementById("display").value;
-    console.log(x);}
-   /* else {
-         temp=displayDiv*10 + value1;
-        displayDiv.innerHTML=temp;
+    console.log("op is: ", op)
+    if( op=="+" || op=="-" || op=="/" || op=="*") {
+        document.getElementById("display").innerHTML = "  ";  
+        
     }
-}*/
+    var displayDiv = document.getElementById("display");
+    var displayDiv1 = document.getElementById("display").innerHTML;
+     if(displayDiv1=="0" || displayDiv1==" " ){ 
+        displayDiv.innerHTML =value1;
+        arr[i]=value1;
+        // console.log(arr[i]);
+      }
+    
+   else {
+        var temp;
+        temp=displayDiv1*10 + value1;
+        displayDiv.innerHTML=temp;
+        arr[i]=temp;
+        // console.log(arr[i]);
+    }
+}
 function clr(){
+    var displayDiv = document.getElementById("display");
     displayDiv.innerHTML = 0;
 }
-function setOP(value){
-        op=value;
+function setOP(value1){
+    // console.log(value1)
+    op=value1.innerHTML;
+    // console.log(op)
+     i++;
+    // document.getElementById("display").innerHTML = "  ";   
 }
 function calculate(){
-    if(i<3)
-    {
+    var displayDiv = document.getElementById("display");
     if(op=='+')
     displayDiv.innerHTML = arr[0]+arr[1];
     if(op=='-')
@@ -40,6 +54,4 @@ function calculate(){
     displayDiv.innerHTML = arr[0]*arr[1];
     if(op=='/')
     displayDiv.innerHTML = arr[0]/arr[1];}
-    displayDiv.innerText = "Null";
-    console.log(i);
-}
+    
