@@ -5,15 +5,13 @@ function newpage(){
     i.innerHTML='<img class=" photo" src="2.png">'
   //  listItem.parentNode.replaceChild(newItem, i);
 }
-var arr=[];
+ var arr=[];
 var i=0;
 var op=" ";
-
-
-
+var k;
 function press(value1){
-    console.log("op is: ", op)
-    if( op=="+" || op=="-" || op=="/" || op=="*") {
+    // console.log("op is: ", op)
+    if( k==1) {
         document.getElementById("display").innerHTML = "  ";  
         
     }
@@ -36,22 +34,32 @@ function press(value1){
 function clr(){
     var displayDiv = document.getElementById("display");
     displayDiv.innerHTML = 0;
+    k=0;
+    i=0;
 }
 function setOP(value1){
     // console.log(value1)
     op=value1.innerHTML;
-    // console.log(op)
+    console.log(op)
      i++;
+      k=1;
     // document.getElementById("display").innerHTML = "  ";   
 }
 function calculate(){
     var displayDiv = document.getElementById("display");
+    var a=i--;
     if(op=='+')
-    displayDiv.innerHTML = arr[0]+arr[1];
+    displayDiv.innerHTML = arr[a]+arr[i];
+    if(op=='*'){
+        // console.log(arr[0])
+        displayDiv.innerHTML=arr[a]*arr[i]; }
     if(op=='-')
-    displayDiv.innerHTML = arr[0]-arr[1];
-    if(op=='*')
-    displayDiv.innerHTML = arr[0]*arr[1];
+    displayDiv.innerHTML = arr[a]-arr[i];
     if(op=='/')
-    displayDiv.innerHTML = arr[0]/arr[1];}
+    displayDiv.innerHTML = arr[a]/arr[i];
+    i++;
+    arr[i]=parseInt(document.getElementById("display").innerHTML) ;
+    console.log(arr[i])
+
+}
     
