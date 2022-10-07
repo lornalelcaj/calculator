@@ -71,6 +71,7 @@ p{
     font-size: 20px;
     border-radius: 100%;
     color: aliceblue;
+    cursor: pointer;
 }
 .btn1{
     background-color: gray;
@@ -84,7 +85,11 @@ p{
     border-radius: 15px 15px 15px 15px;
     background-color: silver;
     margin-bottom: 10px;
+    cursor: pointer;
 }
+button:hover {
+    background-color: #565555;
+  }
 .photo{
     height: 100px;
     width: 150px;
