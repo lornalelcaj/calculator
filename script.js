@@ -9,6 +9,7 @@ function newpage(){
 var i=0;
 var op=" ";
 var k;
+var l;
 function press(value1){
     if( k==1) {
         document.getElementById("display").innerHTML = "  ";  
@@ -24,9 +25,9 @@ function press(value1){
     
    else {
         var temp;
-        temp=displayDiv1*10 + value1;
+        temp=displayDiv1+ value1;//nqs hiqet *10 prishet mbledhja
         displayDiv.innerHTML=temp;
-        arr[i]=temp;
+        arr[i]=parseInt(temp);
         // console.log(arr[i]);
     }
 }
@@ -35,6 +36,7 @@ function clr(){
     displayDiv.innerHTML = 0;
     k=0;
     i=0;
+    l=0;
 }
 function setOP(value1){
     // console.log(value1)
@@ -46,19 +48,26 @@ function setOP(value1){
 }
 function calculate(){
     var displayDiv = document.getElementById("display");
+    if(l==1)
+    displayDiv.innerHTML = "NaN";
+    else{
     var a=i--;
     if(op=='+')
     displayDiv.innerHTML = arr[a]+arr[i];
-    if(op=='*'){
-        // console.log(arr[0])
-        displayDiv.innerHTML=arr[a]*arr[i]; }
+    if(op=='*')
+        displayDiv.innerHTML=arr[a] * arr[i]; 
     if(op=='-')
-    displayDiv.innerHTML = arr[a]-arr[i];
+    displayDiv.innerHTML = arr[i]-arr[a];
     if(op=='/')
-    displayDiv.innerHTML = arr[a]/arr[i];
+    displayDiv.innerHTML = arr[i]/arr[a];
     i++;
     arr[i]=parseInt(document.getElementById("display").innerHTML) ;
     console.log(arr[i])
-
-}
     
+}
+}
+function float(el){
+    var displayDiv = document.getElementById("display").innerHTML;
+    document.getElementById("display").innerHTML=displayDiv+el.innerHTML;
+    l=1;
+}
