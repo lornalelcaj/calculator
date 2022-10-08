@@ -25,7 +25,7 @@ function press(value1){
     
    else {
         var temp;
-        temp=displayDiv1+ value1;//nqs hiqet *10 prishet mbledhja
+        temp=displayDiv1+ value1;
         displayDiv.innerHTML=temp;
         arr[i]=parseInt(temp);
         // console.log(arr[i]);
