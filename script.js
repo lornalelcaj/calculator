@@ -1,20 +1,18 @@
 function newpage(){
-    var i=document.querySelector("body");
-  //  i.remove();
-   // const newItem = document.createElement('li');
-    i.innerHTML='<img class=" photo" src="2.png">'
-  //  listItem.parentNode.replaceChild(newItem, i);
+    window.location.href = "http://localhost:65535";
 }
- var arr=[];
+
+var arr=[];
 var i=0;
 var op=" ";
 var k;
 var l;
+
 function press(value1){
     if( k==1) {
         document.getElementById("display").innerHTML = "  ";  
-        
     }
+    
     var displayDiv = document.getElementById("display");
     var displayDiv1 = document.getElementById("display").innerHTML;
      if(displayDiv1=="0" || displayDiv1==" " ){ 
