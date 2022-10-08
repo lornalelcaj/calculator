@@ -44,7 +44,6 @@ function setOP(value1){
     console.log(op)
      i++;
       k=1;
-    // document.getElementById("display").innerHTML = "  ";   
 }
 function calculate(){
     var displayDiv = document.getElementById("display");
